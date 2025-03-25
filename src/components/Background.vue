@@ -39,11 +39,13 @@ const images = [
 </script>
 
 <template>
-    <div class="absolute -top-10 blur-[100px] bg-blur/60 h-25 w-full"/>
-    <div class="relative w-screen h-screen overflow-hidden bg-gradient">
-        <div class="-z-10 absolute bottom-[calc(-276.5px+69.5%)] -left-10 flex flex-row w-full gap-2 rotate-9">
-            <div v-for="column in images" class="flex flex-col min-w-[28.9%] gap-2 odd:mt-[23.4%]">
-                <img v-for="image in column" :src="image" alt="background image" class="rounded-lg h-[49.2vw] object-cover">
+    <div class="relative -z-10">
+        <div class="absolute -top-10 blur-[100px] bg-blur/60 h-25 w-full"/>
+        <div class="absolute w-screen h-screen overflow-hidden bg-gradient">
+            <div class="-z-10 absolute bottom-[calc(-276.5px+69.5%)] -left-10 flex flex-row w-full gap-2 rotate-9">
+                <div v-for="column in images" class="flex flex-col min-w-[28.9%] gap-2 odd:mt-[23.4%]">
+                    <img v-for="image in column" :src="image" alt="background image" class="rounded-lg h-[49.2vw] object-cover">
+                </div>
             </div>
         </div>
     </div>
