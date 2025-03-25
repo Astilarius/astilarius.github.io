@@ -39,12 +39,18 @@ const images = [
 </script>
 
 <template>
-    <div class="absolute -top-52 -left-10 flex flex-row w-full gap-2 rotate-9">
-        <div v-for="column in images" class="flex flex-col min-w-[28.9%] gap-2 odd:mt-[14.4%]">
-            <img v-for="image in column" :src="image" alt="background image" class="rounded-lg h-[49.2vw] object-cover">
+    <div class="absolute -top-10 blur-[100px] bg-blur/60 h-25 w-full"/>
+    <div class="relative w-screen h-screen overflow-hidden bg-gradient">
+        <div class="-z-10 absolute bottom-[calc(-276.5px+69.5%)] -left-10 flex flex-row w-full gap-2 rotate-9">
+            <div v-for="column in images" class="flex flex-col min-w-[28.9%] gap-2 odd:mt-[23.4%]">
+                <img v-for="image in column" :src="image" alt="background image" class="rounded-lg h-[49.2vw] object-cover">
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.bg-gradient {
+    background: linear-gradient(196.56deg, rgba(0, 0, 0, 9.5e-05) 10.43%, rgba(21, 5, 52, 0.641925) 30.66%, rgba(0, 0, 0, 0.855327) 37.66%, rgba(9, 1, 25, 0.95) 45.57%, rgba(0, 0, 0, 0.95) 77.38%, rgba(5, 1, 14, 0.95) 94.32%);
+}
 </style>
