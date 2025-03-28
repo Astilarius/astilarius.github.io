@@ -1,0 +1,11 @@
+$color-main-bg: #DA28FF;
+$color-blur:#D613FC;
+$color-main-text: #141131;
+
+$font-stack: 'system-ui', sans-serif;
+
+body{
+    margin: 0;
+    background-color: $color-main-bg;
+    font-family: $font-stack;
+}

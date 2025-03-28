@@ -1,9 +1,0 @@
-@theme {
-    --color-main-bg: #DA28FF;
-    --color-blur:#D613FC;
-    --color-main-text: #141131;
-}
-
-body{
-    @apply bg-main-bg font-['system-ui'];
-}
