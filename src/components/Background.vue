@@ -39,20 +39,70 @@ const images = [
 </script>
 
 <template>
-    <div class="relative -z-10">
-        <div class="absolute -top-10 blur-[100px] bg-blur/60 h-25 w-full"/>
-        <div class="absolute w-screen h-screen overflow-hidden bg-gradient">
-            <div class="-z-10 absolute bottom-[calc(-276.5px+69.5%)] -left-10 flex flex-row w-full gap-2 rotate-9">
-                <div v-for="column in images" class="flex flex-col min-w-[28.9%] gap-2 odd:mt-[23.4%]">
-                    <img v-for="image in column" :src="image" alt="background image" class="rounded-lg h-[49.2vw] object-cover">
+    <div class="background">
+        <div class="background__blur"/>
+        <div class="background__wrapper">
+            <div class="background__table">
+                <div v-for="column in images" class="background__column">
+                    <img v-for="image in column" :src="image" alt="background image" class="background__image">
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-.bg-gradient {
-    background: linear-gradient(196.56deg, rgba(0, 0, 0, 9.5e-05) 10.43%, rgba(21, 5, 52, 0.641925) 30.66%, rgba(0, 0, 0, 0.855327) 37.66%, rgba(9, 1, 25, 0.95) 45.57%, rgba(0, 0, 0, 0.95) 77.38%, rgba(5, 1, 14, 0.95) 94.32%);
+<style scoped lang="scss">
+@import "./../style.scss";
+
+.background {
+    position: relative;
+    z-index: -10;
+
+    .background__blur {
+        position: absolute;
+        top: -2rem;
+        filter: blur(100.5px);
+        width: 100%;
+        height: 7rem;
+        background-color: $color-blur;
+        opacity: 0.6;
+        border-radius: 100%;
+    }
+
+    .background__wrapper {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(196.56deg, rgba(0, 0, 0, 9.5e-05) 10.43%, rgba(21, 5, 52, 0.641925) 30.66%, rgba(0, 0, 0, 0.855327) 37.66%, rgba(9, 1, 25, 0.95) 45.57%, rgba(0, 0, 0, 0.95) 77.38%, rgba(5, 1, 14, 0.95) 94.32%);
+
+        .background__table {
+            z-index: -10;
+            position: absolute;
+            bottom: calc(-397.5px + 62.15%);
+            left: -2.5rem;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap: 0.5rem;
+            rotate: 9deg;
+
+            .background__column {
+                display: flex;
+                flex-direction: column;
+                min-width: 28.9%;
+                gap: 0.5rem;
+                &:nth-child(even) {
+                    margin-top: 23.4%;
+                }
+
+                .background__image {
+                    border-radius: 9.31px;
+                    height: 49.2vw;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 </style>
