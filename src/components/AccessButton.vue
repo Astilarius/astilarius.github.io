@@ -3,20 +3,125 @@ defineProps({
     title: String,
     hint: String,
     price: String,
-    isBestOffer: Boolean,
+    isBestOffer: {
+        type: Boolean,
+        default: false,
+    },
+    isSelected: {
+        type: Boolean,
+        default: false,
+    },
 })
 </script>
 
 <template>
-    <button class="relative bg-white/10 text-white rounded-full w-full py-2 flex flex-row text-base justify-between pl-6 pr-14 items-center">
-        <span v-if="isBestOffer" class="absolute bg-white text-main-text -top-3 right-6 rounded-full px-5 py-0.5 font-bold text-sm">BEST OFFER</span>
-        <span class="flex flex-col items-start">
-            <span class="font-semibold">{{title}}</span>
-            <span class="text-white/70">{{hint}}</span>
-        </span>
-        <span class="w-17 text-white/70 text-start">{{price}}</span>
-    </button>
+    <div class="access-button-wrapper" :class="{ selected: isSelected, 'best-offer': isBestOffer }">
+        <button class="access-button" :class="{ selected: isSelected }" v-on:click="$emit('click')">
+            <span v-if="isBestOffer" class="access-button__best-offer-wrapper">
+                <span class="access-button__best-offer">{{ $t('BEST OFFER') }}</span>
+            </span>
+            <span class="access-button__text-block">
+                <span class="access-button__title">{{title}}</span>
+                <span class="access-button__hint">{{hint}}</span>
+            </span>
+            <span class="access-button__price" v-html="price"/>
+        </button>
+    </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "sass:color";
+@import "./../style.scss";
+
+.access-button-wrapper {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    border-radius: 100px;
+    height: $button-height;
+
+    &.best-offer {
+        background: linear-gradient(160deg, transparent, rgba(253, 148, 244, 0) 20%, #FD94F4 40%, #01B4FF 65%, rgba(1, 180, 255, 0) 85%, transparent 100%);
+    }
+    &.selected {
+        background: transparent;
+    }
+}
+
+.access-button {
+    position: relative;
+    background-color: $access-button-bg;
+
+    color: $white;
+    border-radius: 100px;
+    width: calc(100% - 1px);
+    height: calc($button-height - 1px);
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+
+
+    &.selected {
+        border-width: 1px;
+        border-color: $white;
+        background-color: $access-button-bg-active;
+
+        .access-button__best-offer-wrapper {
+            background: $white;
+            .access-button__best-offer {
+                background: $white;
+                border-image-source: $white;
+                color: $color-main-text;
+            }
+        }
+    }
+
+    .access-button__best-offer-wrapper {
+        background: linear-gradient(270deg, #00B5FF 0%, #632AF7 53.01%, #FF96F4 100%);
+        position: absolute;
+        top: -0.75rem;
+        right: 1.5rem;
+        border-radius: 100px;
+        height: 1.25rem;
+        width: 114px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .access-button__best-offer {
+            background: linear-gradient(90deg, #BC1FEF 0%, #0035FF 100%);
+            color: $white;
+            border-radius: 100px;
+            padding: 0.125rem 1.125rem 0.125rem 1.125rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+    }
+
+    .access-button__text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .access-button__title {
+            font-weight: 600;
+        }
+
+        .access-button__hint {
+            color: text-white/70;
+        }
+    }
+
+    .access-button__price {
+        width: 5.5rem;
+        color: text-white/70;
+        text-align: start;
+    }
+
+}
 </style>

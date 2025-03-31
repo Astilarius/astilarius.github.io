@@ -41,6 +41,7 @@ const images = [
 <template>
     <div class="background">
         <div class="background__blur"/>
+        <div class="background__gradient"/>
         <div class="background__wrapper">
             <div class="background__table">
                 <div v-for="column in images" class="background__column">
@@ -60,8 +61,8 @@ const images = [
 
     .background__blur {
         position: absolute;
-        top: -2rem;
-        filter: blur(100.5px);
+        top: -3.5rem;
+        filter: blur(35px);
         width: 100%;
         height: 7rem;
         background-color: $color-blur;
@@ -69,31 +70,42 @@ const images = [
         border-radius: 100%;
     }
 
-    .background__wrapper {
+    .background__gradient {
         position: absolute;
         width: 100vw;
         height: 100vh;
+        opacity: 0.1;
+        background: linear-gradient(136.59deg, #DA28FF 3.34%, #7FCCFF 92.15%);
+    }
+
+    .background__wrapper {
+        position: absolute;
+        width: 100vw;
+        height: 113vh;
+        max-height: 844px;
+        top: -13vh;
         overflow: hidden;
         background: linear-gradient(196.56deg, rgba(0, 0, 0, 9.5e-05) 10.43%, rgba(21, 5, 52, 0.641925) 30.66%, rgba(0, 0, 0, 0.855327) 37.66%, rgba(9, 1, 25, 0.95) 45.57%, rgba(0, 0, 0, 0.95) 77.38%, rgba(5, 1, 14, 0.95) 94.32%);
 
         .background__table {
             z-index: -10;
             position: absolute;
-            bottom: calc(-397.5px + 62.15%);
-            left: -2.5rem;
+            bottom: calc(-220.5px + 55.15%);
+            left: -2.75rem;
             display: flex;
             flex-direction: row;
             width: 100%;
-            gap: 0.5rem;
+            gap: 0.4rem;
             rotate: 9deg;
+
 
             .background__column {
                 display: flex;
                 flex-direction: column;
                 min-width: 28.9%;
-                gap: 0.5rem;
+                gap: 0.4rem;
                 &:nth-child(even) {
-                    margin-top: 23.4%;
+                    margin-top: -23.4%;
                 }
 
                 .background__image {

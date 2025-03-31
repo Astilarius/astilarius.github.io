@@ -3,10 +3,11 @@
 </script>
 
 <template>
-    <button class="bg-white rounded-full font-semibold text-xl w-full py-4">
+    <button class="button">
         <slot/>
     </button>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
 </style>
