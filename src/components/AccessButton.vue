@@ -118,7 +118,7 @@ defineProps({
     }
 
     .access-button__price {
-        width: 5.5rem;
+        width: 6rem;
         color: text-white/70;
         text-align: start;
     }
