@@ -41,7 +41,7 @@ defineProps({
     height: variables.$button-height;
 
     &.best-offer {
-        background: linear-gradient(160deg, transparent, rgba(253, 148, 244, 0) 20%, #FD94F4 40%, #01B4FF 65%, rgba(1, 180, 255, 0) 85%, transparent 100%);
+        background: linear-gradient(160deg, transparent, rgba(253, 148, 244, 0) 10%, #FD94F4 50%, #01B4FF 65%, rgba(1, 180, 255, 0) 85%, transparent 100%);
     }
     &.selected {
         background: transparent;
