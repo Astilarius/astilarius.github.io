@@ -115,14 +115,20 @@ defineProps({
         }
 
         .access-button__hint {
-            color: text-white/70;
+            opacity: 0.7;
+            color: $white;
+            font-size: 1rem;
+            font-weight: 400;
         }
     }
 
     .access-button__price {
+        opacity: 0.7;
+        color: $white;
         width: 6rem;
-        color: text-white/70;
         text-align: start;
+        font-size: 1rem;
+        font-weight: 400;
     }
 
 }
