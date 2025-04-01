@@ -11,6 +11,9 @@ import CardsBlock from "./components/CardsBlock.vue";
     <Background/>
     <div class="px-6 flex flex-col gap-2">
         <h1 class="text-center text-5xl font-extrabold text-white pt-40">Get Unlimited Access</h1>
+        <a href="#" class="cross-button">
+            <img src="./assets/cross.svg"/>
+        </a>
         <CardsBlock/>
         <ButtonsBlock/>
         <Footer/>
