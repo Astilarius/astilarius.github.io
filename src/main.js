@@ -11,8 +11,11 @@ import pt from './locales/pt.json'
 
 console.log(en['Terms of Use'])
 
+const systemLanguage = navigator.language || navigator.userLanguage;
+const locale = systemLanguage.split('-')[0];
+
 const i18n = createI18n({
-    locale: 'en',
+    locale: locale || 'en',
     fallbackLocale: 'en',
     messages: {
         de: de,
