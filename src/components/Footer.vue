@@ -11,7 +11,7 @@
 </template>
 
 <style scoped lang="scss">
-@import "./../style.scss";
+@use "./../variables";
 
 .footer {
     opacity: 0.3;
@@ -28,7 +28,7 @@
         margin-bottom: 2.25rem;
     }
     .footer__link {
-        color: $white;
+        color: variables.$white;
         text-decoration-thickness: 1px;
     }
 

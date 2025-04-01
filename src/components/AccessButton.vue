@@ -31,14 +31,14 @@ defineProps({
 
 <style scoped lang="scss">
 @use "sass:color";
-@import "./../style.scss";
+@use './../variables';
 
 .access-button-wrapper {
     display: flex;
     align-items: end;
     justify-content: start;
     border-radius: 100px;
-    height: $button-height;
+    height: variables.$button-height;
 
     &.best-offer {
         background: linear-gradient(160deg, transparent, rgba(253, 148, 244, 0) 20%, #FD94F4 40%, #01B4FF 65%, rgba(1, 180, 255, 0) 85%, transparent 100%);
@@ -50,12 +50,12 @@ defineProps({
 
 .access-button {
     position: relative;
-    background-color: $access-button-bg;
+    background-color: variables.$access-button-bg;
 
-    color: $white;
+    color: variables.$white;
     border-radius: 100px;
     width: calc(100% - 1px);
-    height: calc($button-height - 1px);
+    height: calc(100% - 1px);
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     display: flex;
     gap: 0.5rem;
@@ -69,14 +69,14 @@ defineProps({
 
     &.selected {
         border-width: 1px;
-        border-color: $white;
-        background-color: $access-button-bg-active;
+        border-color: variables.$white;
+        background-color: variables.$access-button-bg-active;
 
         .access-button__best-offer-wrapper {
-            background: $white;
+            background: variables.$white;
             .access-button__best-offer {
-                background: $white;
-                color: $color-main-text;
+                background: variables.$white;
+                color: variables.$color-main-text;
             }
         }
     }
@@ -95,7 +95,7 @@ defineProps({
 
         .access-button__best-offer {
             background: linear-gradient(90deg, #BC1FEF 0%, #0035FF 100%);
-            color: $white;
+            color: variables.$white;
             border-radius: 100px;
             padding: 0.125rem 1.125rem 0.125rem 1.125rem;
             font-weight: 700;
@@ -119,7 +119,7 @@ defineProps({
 
         .access-button__hint {
             opacity: 0.7;
-            color: $white;
+            color: variables.$white;
             font-size: 1rem;
             font-weight: 400;
             .fr & {
@@ -130,7 +130,7 @@ defineProps({
 
     .access-button__price {
         opacity: 0.7;
-        color: $white;
+        color: variables.$white;
         width: 6rem;
         text-align: start;
         font-size: 1rem;

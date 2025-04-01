@@ -37,8 +37,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import "style.scss";
-
+@use "variables";
 
 .content {
     padding: 0 1.5rem 0 1.5rem;
@@ -66,7 +65,7 @@ onMounted(() => {
         font-size: 3rem;
         line-height: 1;
         font-weight: 800;
-        color: $white;
+        color: variables.$white;
         @media only screen and (min-height: 844px) {
             margin: 0 0 1.5rem 0;
         }

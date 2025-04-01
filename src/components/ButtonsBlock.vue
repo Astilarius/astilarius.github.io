@@ -31,7 +31,7 @@ const selectButton = (index) => {
 </template>
 
 <style scoped lang="scss">
-@import "./../style.scss";
+@use "./../variables";
 
 .buttons-block {
     display: flex;
@@ -45,10 +45,10 @@ const selectButton = (index) => {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: $white;
-    color: $color-main-text;
+    background-color: variables.$white;
+    color: variables.$color-main-text;
     width: 100%;
-    height: $button-height;
+    height: variables.$button-height;
     border-radius: 100px;
     font-weight: 600;
     font-size: 1.25rem;

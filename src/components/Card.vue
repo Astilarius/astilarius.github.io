@@ -13,7 +13,7 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-@import "./../style.scss";
+@use './../variables';
 
 .card {
     position: relative;
@@ -28,7 +28,7 @@ defineProps({
     bottom: 0.75rem;
     left: 0.5rem;
     max-width: 85%;
-    color: $white;
+    color: variables.$white;
     font-size: 0.75rem;
     .pt & {
         font-size: 0.65rem;
