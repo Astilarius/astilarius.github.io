@@ -13,7 +13,7 @@ console.log(en['Terms of Use'])
 
 const i18n = createI18n({
     locale: 'en',
-    fallbackLocale: 'de',
+    fallbackLocale: 'en',
     messages: {
         de: de,
         en: en,
