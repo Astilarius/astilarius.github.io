@@ -109,6 +109,7 @@ defineProps({
         align-items: start;
 
         .access-button__title {
+            font-size: 1rem;
             text-align: center;
             font-weight: 600;
         }
