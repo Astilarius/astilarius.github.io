@@ -9,8 +9,6 @@ import fr from './locales/fr.json'
 import ja from './locales/ja.json'
 import pt from './locales/pt.json'
 
-console.log(en['Terms of Use'])
-
 const systemLanguage = navigator.language || navigator.userLanguage;
 const locale = systemLanguage.split('-')[0];
 
