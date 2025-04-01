@@ -58,6 +58,7 @@ defineProps({
     height: calc($button-height - 1px);
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     display: flex;
+    gap: 0.5rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +76,6 @@ defineProps({
             background: $white;
             .access-button__best-offer {
                 background: $white;
-                border-image-source: $white;
                 color: $color-main-text;
             }
         }
@@ -88,7 +88,7 @@ defineProps({
         right: 1.5rem;
         border-radius: 100px;
         height: 1.25rem;
-        width: 114px;
+        width: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -109,6 +109,7 @@ defineProps({
         align-items: start;
 
         .access-button__title {
+            text-align: center;
             font-weight: 600;
         }
 
