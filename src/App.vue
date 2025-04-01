@@ -14,7 +14,8 @@ function getQueryParam(name) {
     return urlParams.get(name);
 }
 
-const routeLang = getQueryParam('lang');
+const systemLanguage = navigator.language || navigator.userLanguage;
+const routeLang = getQueryParam('lang') || systemLanguage.split('-')[0];
 
 onMounted(() => {
     if (routeLang) {

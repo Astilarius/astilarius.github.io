@@ -9,11 +9,8 @@ import fr from './locales/fr.json'
 import ja from './locales/ja.json'
 import pt from './locales/pt.json'
 
-const systemLanguage = navigator.language || navigator.userLanguage;
-const locale = systemLanguage.split('-')[0];
-
 const i18n = createI18n({
-    locale: locale || 'en',
+    locale: 'en',
     fallbackLocale: 'en',
     messages: {
         de: de,
