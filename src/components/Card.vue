@@ -36,12 +36,9 @@ defineProps({
         max-width: 95%;
     }
     .es & {
-        font-size: 0.7rem;
-    }
-    .fr & {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         left: 0.25rem;
-        max-width: 95%;
+        max-width: 90%;
     }
 }
 </style>

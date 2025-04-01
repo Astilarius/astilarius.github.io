@@ -110,8 +110,11 @@ defineProps({
 
         .access-button__title {
             font-size: 1rem;
-            text-align: center;
+            text-align: start;
             font-weight: 600;
+            .de & {
+                font-size: 0.9rem;
+            }
         }
 
         .access-button__hint {
@@ -119,6 +122,9 @@ defineProps({
             color: $white;
             font-size: 1rem;
             font-weight: 400;
+            .fr & {
+                font-size: 0.9rem;
+            }
         }
     }
 
@@ -130,6 +136,5 @@ defineProps({
         font-size: 1rem;
         font-weight: 400;
     }
-
 }
 </style>
