@@ -1,16 +1,21 @@
 <script setup>
 import moon from './../assets/background/moon.webp'
-import flamingo from './../assets/background/flamingo.webp'
+// import flamingo from './../assets/background/flamingo.webp'
+import flamingo from './../assets/background/flamingo.png'
 import woman from './../assets/background/woman.webp'
 import barbie from './../assets/background/barbie.webp'
-import black_hole from './../assets/background/black_hole.webp'
-import castle from './../assets/background/castle.webp'
+// import black_hole from './../assets/background/black_hole.webp'
+import black_hole from './../assets/background/black_hole.png'
+// import castle from './../assets/background/castle.webp'
+import castle from './../assets/background/castle.png'
 import apocalypse from './../assets/background/apocalypse.webp'
-import pope from './../assets/background/pope.webp'
+import pope from './../assets/background/pope.png'
 import space from './../assets/background/space.webp'
 import pickachu from './../assets/background/pickachu.webp'
-import mountains from './../assets/background/mountains.webp'
-import woman_in_car from './../assets/background/woman_in_car.webp'
+// import mountains from './../assets/background/mountains.webp'
+import mountains from './../assets/background/mountains.png'
+// import woman_in_car from './../assets/background/woman_in_car.webp'
+import woman_in_car from './../assets/background/woman_in_car.png'
 
 const images = [
     [
@@ -54,7 +59,7 @@ const images = [
 </template>
 
 <style scoped lang="scss">
-@import "./../style.scss";
+@use "./../variables";
 
 .background {
     position: relative;
@@ -66,7 +71,7 @@ const images = [
         filter: blur(35px);
         width: 100%;
         height: 7rem;
-        background-color: $color-blur;
+        background-color: variables.$color-blur;
         opacity: 0.6;
         border-radius: 100%;
     }
