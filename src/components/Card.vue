@@ -20,7 +20,7 @@ defineProps({
 }
 
 .card__image {
-    height: 140px;
+    max-width: 100%;
 }
 
 .card__text {
@@ -30,5 +30,18 @@ defineProps({
     max-width: 85%;
     color: $white;
     font-size: 0.75rem;
+    .pt & {
+        font-size: 0.65rem;
+        left: 0.25rem;
+        max-width: 95%;
+    }
+    .es & {
+        font-size: 0.7rem;
+    }
+    .fr & {
+        font-size: 0.7rem;
+        left: 0.25rem;
+        max-width: 95%;
+    }
 }
 </style>
