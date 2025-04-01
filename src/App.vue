@@ -27,7 +27,7 @@ onMounted(() => {
     <Background/>
     <div class="content" :class="routeLang">
         <a href="#" class="cross-button">
-            <img src="./assets/cross.svg"/>
+            <img src="./assets/cross.svg" alt="Cross" />
         </a>
         <h1 class="page-title" v-html="$t('Get Unlimited <br>Access')" />
         <CardsBlock/>
