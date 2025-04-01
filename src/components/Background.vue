@@ -1,16 +1,16 @@
 <script setup>
-import moon from './../assets/background/moon.png'
-import flamingo from './../assets/background/flamingo.png'
-import woman from './../assets/background/woman.png'
-import barbie from './../assets/background/barbie.png'
-import black_hole from './../assets/background/black_hole.png'
-import castle from './../assets/background/castle.png'
-import apocalypse from './../assets/background/apocalypse.png'
-import pope from './../assets/background/pope.png'
-import space from './../assets/background/space.png'
-import pickachu from './../assets/background/pickachu.png'
-import mountains from './../assets/background/mountains.png'
-import woman_in_car from './../assets/background/woman_in_car.png'
+import moon from './../assets/background/moon.webp'
+import flamingo from './../assets/background/flamingo.webp'
+import woman from './../assets/background/woman.webp'
+import barbie from './../assets/background/barbie.webp'
+import black_hole from './../assets/background/black_hole.webp'
+import castle from './../assets/background/castle.webp'
+import apocalypse from './../assets/background/apocalypse.webp'
+import pope from './../assets/background/pope.webp'
+import space from './../assets/background/space.webp'
+import pickachu from './../assets/background/pickachu.webp'
+import mountains from './../assets/background/mountains.webp'
+import woman_in_car from './../assets/background/woman_in_car.webp'
 
 const images = [
     [

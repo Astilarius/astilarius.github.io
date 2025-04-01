@@ -1,8 +1,8 @@
 <script setup>
 import Card from "./Card.vue"
-import art_creation from './../assets/cards/art_creation.png'
-import exclusive_styles from '../assets/cards/exclusive_styles.png'
-import magic_avatars from './../assets/cards/magic_avatars.png'
+import art_creation from './../assets/cards/art_creation.webp'
+import exclusive_styles from '../assets/cards/exclusive_styles.webp'
+import magic_avatars from './../assets/cards/magic_avatars.webp'
 </script>
 
 <template>
