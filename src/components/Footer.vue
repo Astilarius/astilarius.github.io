@@ -23,7 +23,7 @@
     line-height: 1.125rem;
     font-weight: 200;
     text-decoration: underline;
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 1.25rem 0 0.5rem 0;
     @media only screen and (min-height: 844px) {
         margin-bottom: 2.25rem;
     }

@@ -15,6 +15,7 @@ import magic_avatars from './../assets/cards/magic_avatars.webp'
 
 <style scoped lang="scss">
 .cards-block {
+    margin-bottom: 0.875rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

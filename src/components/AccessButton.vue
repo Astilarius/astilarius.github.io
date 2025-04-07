@@ -112,6 +112,7 @@ defineProps({
             font-size: 1rem;
             text-align: start;
             font-weight: 600;
+            letter-spacing: -1px;
             .de & {
                 font-size: 0.9rem;
             }
@@ -128,12 +129,15 @@ defineProps({
         }
     }
 
+    .access-button__price::first-line {
+        font-size: 1rem;
+    }
     .access-button__price {
         opacity: 0.7;
         color: variables.$white;
-        width: 6rem;
+        width: 5.625rem;
         text-align: start;
-        font-size: 1rem;
+        font-size: calc(1rem - 1px);
         font-weight: 400;
     }
 }

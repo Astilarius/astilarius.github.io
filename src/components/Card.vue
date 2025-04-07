@@ -20,16 +20,17 @@ defineProps({
 }
 
 .card__image {
+    width: 7rem;
     max-width: 100%;
 }
 
 .card__text {
     position: absolute;
-    bottom: 0.75rem;
+    bottom: 0.85rem;
     left: 0.5rem;
     max-width: 85%;
     color: variables.$white;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     .pt & {
         font-size: 0.65rem;
         left: 0.25rem;

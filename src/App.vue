@@ -61,9 +61,10 @@ onMounted(() => {
     }
 
     .page-title {
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 0.375rem 0;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.8125rem;
+        letter-spacing: 0.02em;
         line-height: 1;
         font-weight: 800;
         color: variables.$white;
