@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer class="footer flex flex-row gap-14 text-xs font-extralight justify-center underline text-white/30">
+    <footer class="footer">
         <a class="footer__link" href="#">{{ $t('Terms of Use') }}</a>
         <a class="footer__link" href="#">{{ $t('Privacy Policy') }}</a>
         <a class="footer__link" href="#">{{ $t('Restore') }}</a>
