@@ -14,7 +14,7 @@
 @use "./../variables";
 
 .footer {
-    opacity: 0.3;
+    opacity: 0.15;
     display: flex;
     flex-direction: row;
     justify-content: center;
