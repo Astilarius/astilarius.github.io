@@ -1,41 +1,7 @@
 <script setup>
-import moon from './../assets/background/moon.webp'
-import flamingo from './../assets/background/flamingo.webp'
-import woman from './../assets/background/woman.webp'
-import barbie from './../assets/background/barbie.webp'
-import black_hole from './../assets/background/black_hole.webp'
-import castle from './../assets/background/castle.webp'
-import apocalypse from './../assets/background/apocalypse.webp'
-import pope from './../assets/background/pope.webp'
-import space from './../assets/background/space.webp'
-import pickachu from './../assets/background/pickachu.webp'
-import mountains from './../assets/background/mountains.webp'
-import woman_in_car from './../assets/background/woman_in_car.webp'
+import backgroundx2 from './../assets/background/backgroundx2.webp'
+import backgroundx3 from './../assets/background/backgroundx3.webp'
 
-const images = [
-    [
-        moon,
-        flamingo,
-        woman
-    ],
-    [
-        barbie,
-        black_hole,
-        castle,
-        barbie
-    ],
-    [
-        apocalypse,
-        pope,
-        space
-    ],
-    [
-        pickachu,
-        mountains,
-        woman_in_car,
-        pickachu
-    ]
-]
 </script>
 
 <template>
@@ -44,11 +10,11 @@ const images = [
         <div class="background__gradient"/>
         <div class="background__dark-gradient"/>
         <div class="background__wrapper">
-            <div class="background__table">
-                <div v-for="column in images" class="background__column">
-                    <img v-for="image in column" :src="image" alt="background image" class="background__image">
-                </div>
-            </div>
+            <picture class="background__picture">
+                <source :srcset="backgroundx3" media="(min-resolution: 3dppx)">
+                <source :srcset="backgroundx2" media="(min-resolution: 2dppx)">
+                <img :src="backgroundx2" alt="background image" class="background__image">
+            </picture>
         </div>
     </div>
 </template>
@@ -92,32 +58,19 @@ const images = [
         height: 100vh;
         overflow: hidden;
 
-        .background__table {
+        .background__picture {
             z-index: -10;
             position: absolute;
-            bottom: calc(-220.5px + 63%);
-            left: -2.5rem;
+            bottom: calc(-340.33px + 79.66%);
+            left: calc(-310px + 66.66%);
             display: flex;
             flex-direction: row;
             width: 100%;
             gap: 0.4rem;
             rotate: 9deg;
 
-
-            .background__column {
-                display: flex;
-                flex-direction: column;
-                min-width: 28.9%;
-                gap: 0.4rem;
-                &:nth-child(even) {
-                    margin-top: -23.4%;
-                }
-
-                .background__image {
-                    border-radius: 9.31px;
-                    height: 49.2vw;
-                    object-fit: cover;
-                }
+            .background__image {
+                width: 461px;
             }
         }
     }
