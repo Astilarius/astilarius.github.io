@@ -20,7 +20,6 @@ defineProps({
 }
 
 .card__image {
-    width: 7rem;
     max-width: 100%;
 }
 
