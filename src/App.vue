@@ -69,7 +69,7 @@ onMounted(() => {
         font-weight: 800;
         color: variables.$white;
         @media only screen and (min-height: 844px) {
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1rem 0;
         }
     }
 }

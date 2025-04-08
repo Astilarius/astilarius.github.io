@@ -53,5 +53,8 @@ const selectButton = (index) => {
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.5rem;
+    @media only screen and (min-height: 844px) {
+        margin-top: 9px;
+    }
 }
 </style>

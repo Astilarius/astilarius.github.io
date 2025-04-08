@@ -20,5 +20,8 @@ import magic_avatars from './../assets/cards/magic_avatars.webp'
     flex-direction: row;
     justify-content: center;
     gap: 0.25rem;
+    @media only screen and (min-height: 844px) {
+        margin-bottom: 19px;
+    }
 }
 </style>

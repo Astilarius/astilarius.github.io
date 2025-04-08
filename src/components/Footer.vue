@@ -25,7 +25,7 @@
     text-decoration: underline;
     margin: 1.25rem 0 0.5rem 0;
     @media only screen and (min-height: 844px) {
-        margin-bottom: 2.25rem;
+        margin: 1.75rem 0 2.25rem 0;
     }
     .footer__link {
         color: variables.$white;

@@ -26,8 +26,8 @@ defineProps({
 
 .card__text {
     position: absolute;
-    bottom: 0.85rem;
-    left: 0.5rem;
+    bottom: 15px;
+    left: 10px;
     max-width: 85%;
     color: variables.$white;
     font-size: 0.8rem;
