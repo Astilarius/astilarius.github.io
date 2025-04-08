@@ -44,10 +44,7 @@
         gap: 2rem;
     }
     .fr & {
-        margin: 0.5rem 0 0.5rem 0;
-        @media only screen and (min-height: 844px) {
-            margin-bottom: 1.25rem;
-        }
+        font-size: 8px;
     }
     .pt & {
         gap: 2.5rem;
