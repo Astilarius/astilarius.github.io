@@ -75,7 +75,7 @@ onMounted(() => {
 }
 .pt .page-title, .ja .page-title {
     @media only screen and (max-height: 667px) {
-        font-size: 2.9rem;
+        font-size: 2.85rem;
     }
 }
 </style>
