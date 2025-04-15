@@ -22,7 +22,7 @@ onMounted(() => {
         locale.value = routeLang;
     }
 });
-//test
+
 </script>
 
 <template>
